@@ -35,7 +35,7 @@ const SignUp = () => {
             </label>
             <input
               type="text"
-              placeholder="John Doe"
+              placeholder="Enter fullname"
               className="w-full input input-bordered  h-10"
               value={inputs.fullName}
               onChange={(e) =>
@@ -50,7 +50,7 @@ const SignUp = () => {
             </label>
             <input
               type="text"
-              placeholder="johndoe"
+              placeholder=" Enter username"
               className="w-full input input-bordered h-10"
               value={inputs.username}
               onChange={(e) =>
@@ -99,8 +99,8 @@ const SignUp = () => {
           </Link>
 
           <div>
-            <button className="btn btn-block btn-sm mt-2 border border-slate-700">
-              Sign Up
+            <button className="btn btn-block btn-sm mt-2 border border-slate-700" disabled = {loading}>
+              {loading ? <span className="loading loading-spinner" ></span> : "Sign Up" }
             </button>
           </div>
         </form>
